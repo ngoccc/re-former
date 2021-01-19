@@ -1,0 +1,22 @@
+<h1>Edit User</h1>
+
+<ul class="error">
+	<% @user.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	<% end %>
+</ul>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username%>
+  <%= f.text_field :username%><br />
+
+  <%= f.label :email%>
+  <%= f.text_field :email%><br />
+
+  <%= f.label :password%>
+  <%= f.text_field :password%><br />
+
+  <%= f.submit %>
+
+<% end %>
+
